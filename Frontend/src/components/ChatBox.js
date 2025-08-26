@@ -16,7 +16,7 @@ const ChatBox = () => {
     setMessages((prev) => [...prev, { type: "bot", text: "Typing..." }]);
 
     try {
-      const res = await fetch("http://localhost:5000/api/message", {
+      const res = await fetch("https://ai-emopal-264n.vercel.app/api/message", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: userInput }),
